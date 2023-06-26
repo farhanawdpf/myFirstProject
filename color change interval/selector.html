@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+  <div class='box'></div>
+  
+  <style>
+    .box{border-radius:3px; border:1px; solid gray;padding:5px;width:200px;height:200px}
+  </style>
+  <script src="js/jquery.js"></script>
+  
+  <script>
+    $(function(){
+	  var colors=[{bgColor:"red"},
+	  {bgColor:"green",fontColor:"white"},
+	  {bgColor:"blue",fontColor:"white"},
+	  {bgColor:"pink",fontColor:"blue"},
+	  {bgColor:"yellow",fontColor:"red"},
+	  {bgColor:"magenta",fontColor:"white"},
+	  {bgColor:"navy",fontColor:"white"},
+	  {bgColor:"skyblue",fontColor:"green"},
+	  {bgColor:"lightgreen",fontColor:"yellow"},
+	  {bgColor:"gray",fontColor:"white"}];
+	  i=0;
+	  setInterval(function(){
+	    $(".box").css({backgroundColor:colors[i].bgColor,color:colors[i].fontColor}).html("<h1>"+colors[i++].bgColor+"</h1>");
+		if(i>colors.length-1)i=0;
+	  },1000);
+	
+	});
+  </script>
+  
+</body>
+</html>
