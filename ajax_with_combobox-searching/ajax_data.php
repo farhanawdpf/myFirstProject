@@ -41,7 +41,4 @@ if(isset($_POST['product'])){
 	}
 	echo json_encode($data);
 }
-
-
-
 ?>
